@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <declare-styleable name="HorizontalTextView" >
+        <!--左边文字内容-->
+        <attr name="htvStartText" format="string" />
+        <!--左边字体大小-->
+        <attr name="htvStartTextSize" format="dimension" />
+        <!--左边字体颜色-->
+        <attr name="htvStartTextColor" format="color" />
+        <!--左边字体大小-->
+        <attr name="htvStartTextWidth" format="dimension" />
+        <!--字体是否加粗-->
+        <attr name="htvStartTextBold" format="boolean" />
+
+        <!--文字和文字的距离-->
+        <attr name="htvTextPaddingText" format="dimension" />
+
+        <!--右边文字内容-->
+        <attr name="htvEndText" format="string" />
+        <!--右边字体大小-->
+        <attr name="htvEndTextSize" format="dimension" />
+        <!--右边字体颜色-->
+        <attr name="htvEndTextColor" format="color" />
+        <!--右边字体大小-->
+        <attr name="htvEndTextWidth" format="dimension" />
+        <!--字体是否加粗-->
+        <attr name="htvEndTextBold" format="boolean" />
+        <!--文字是否单行显示 true 加省略号 false-->
+        <attr name="htvEndTextSingle" format="boolean" />
+        <!--右边文字对齐方式-->
+        <attr name="htvEndTextGravity" format="enum" >
+            <!--左对齐-->
+            <enum name="left" value="1" />
+            <!--右对齐-->
+            <enum name="right" value="2" />
+        </attr >
+        <!--右边文字对齐方式-->
+        <attr name="htvTextGravity" format="enum" >
+            <!--居中对齐-->
+            <enum name="center" value="1" />
+            <!--顶部对齐-->
+            <enum name="top" value="2" />
+        </attr >
+    </declare-styleable >
+</resources >
