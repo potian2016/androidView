@@ -1,0 +1,3 @@
+include ':AndroidView'
+include ':app'
+rootProject.name = "ViewTest"
