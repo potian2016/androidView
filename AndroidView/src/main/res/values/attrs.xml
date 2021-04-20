@@ -42,4 +42,58 @@
             <enum name="top" value="2" />
         </attr >
     </declare-styleable >
+
+    <declare-styleable name="CommonItemView">
+        <!--左边图片-->
+        <attr name="civStartDrawable" format="reference|color" />
+        <!--图片距文字的距离-->
+        <attr name="civDrawablePaddingText" format="dimension" />
+        <!--左边图片宽-->
+        <attr name="civStartDrawableWidth" format="dimension" />
+        <!--左边图片高-->
+        <attr name="civStartDrawableHeight" format="dimension" />
+        <!--右边图片-->
+        <attr name="civEndDrawable" format="reference|color" />
+        <!--图片距文字的距离-->
+        <attr name="civTextPaddingDrawable" format="dimension" />
+        <!--右边图片宽-->
+        <attr name="civEndDrawableWidth" format="dimension" />
+        <!--右边图片高-->
+        <attr name="civEndDrawableHeight" format="dimension" />
+        <!--内边距-->
+        <attr name="civSpaceStart" format="dimension" />
+        <attr name="civSpaceEnd" format="dimension" />
+        <attr name="civSpaceTop" format="dimension" />
+        <attr name="civSpaceBottom" format="dimension" />
+        <attr name="civSpaceHorizontal" format="dimension" />
+        <attr name="civSpaceVertical" format="dimension" />
+        <!--文字内容-->
+        <attr name="civTopText" format="string" />
+        <!--字体大小-->
+        <attr name="civTopTextSize" format="dimension" />
+        <!--字体颜色-->
+        <attr name="civTopTextColor" format="color" />
+        <!--文字和文字的距离-->
+        <attr name="civTextPaddingText" format="dimension" />
+        <!--文字内容-->
+        <attr name="civBottomText" format="string" />
+        <!--字体大小-->
+        <attr name="civBottomTextSize" format="dimension" />
+        <!--字体颜色-->
+        <attr name="civBottomTextColor" format="color" />
+        <!--按压时的背景颜色-->
+        <attr name="civPressedColor" format="reference|color" />
+        <!--字体是否加粗-->
+        <attr name="civTopTextBold" format="boolean" />
+        <attr name="civBottomTextBold" format="boolean" />
+        <!--是否显示圆形图片-->
+        <attr name="civIsCircle" format="boolean" />
+        <!--网络图片地址-->
+        <attr name="civImageUrl" format="string" />
+        <!--默认背景颜色-->
+        <attr name="civBackgroundColor" format="reference|color" />
+        <!--按钮圆角，如果单独设置会覆盖此设置-->
+        <attr name="civCorner" format="dimension" />
+
+    </declare-styleable>
 </resources >
