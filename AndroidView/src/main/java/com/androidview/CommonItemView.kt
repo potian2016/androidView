@@ -30,7 +30,7 @@ import kotlin.math.max
  *  description :多功能Item 按钮
  */
 @Suppress("DEPRECATION")
-class CommonItemView(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class CommonItemView constructor(context: Context, attrs: AttributeSet) : View(context, attrs) {
     // 网络图片URL地址
     private var imageUrl: String? = null
 
@@ -40,7 +40,7 @@ class CommonItemView(context: Context, attrs: AttributeSet) : View(context, attr
     // 网络图片生成Drawable成功
     private var createDrawableSuccess: Boolean = false
 
-    // 除数
+    // 除数（取宽高的时候使用，避免【傅贵】魔法值检查规则）
     private val divisor = 2f
 
     // 中间文字不可用宽度【两边图标占用的宽度+间距】
@@ -288,7 +288,9 @@ class CommonItemView(context: Context, attrs: AttributeSet) : View(context, attr
      */
     private fun createDrawable() {
         Glide.with(context).asDrawable()
-            .load("$imageUrl")
+            .load("${imageUrl}${getEndPath()}")
+            .error(R.drawable.img_vector_default)
+            .placeholder(R.drawable.img_vector_default)
             .into(object : SimpleTarget<Drawable>() {
                 override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                     createDrawableSuccess = true
@@ -302,7 +304,6 @@ class CommonItemView(context: Context, attrs: AttributeSet) : View(context, attr
                         setCivStartDrawable(it)
                     }
                 }
-
             })
     }
 
@@ -398,6 +399,16 @@ class CommonItemView(context: Context, attrs: AttributeSet) : View(context, attr
         }
         return bitmap
     }
+
+    /**
+     * 设置图片等比例缩放
+     * 图片大小取视图宽高的2倍
+     */
+    private fun getEndPath(): String {
+        return "?x-oss-process=image/auto-orient,1/resize,m_fill," +
+            "w_${startDrawableWidth.toInt() * 2},h_${startDrawableHeight.toInt() * 2}/quality,Q_100"
+    }
+
 
     /**
      * 设置左边图标的drawable

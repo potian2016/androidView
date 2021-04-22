@@ -260,3 +260,8 @@ local.properties
 /AndroidView/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i.len
 /AndroidView/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml
 /AndroidView/build/intermediates/packaged_res/debug/values/values.xml
+/AndroidView/build/tmp/kotlin-classes/debug/com/androidview/CommonItemView$createDrawable$1.class
+/AndroidView/build/tmp/kapt3/incrementalData/debug/com/androidview/CommonItemView.class
+/AndroidView/build/tmp/kotlin-classes/debug/com/androidview/CommonItemView.class
+/AndroidView/build/tmp/kapt3/stubs/debug/com/androidview/CommonItemView.java
+/AndroidView/build/tmp/kapt3/stubs/debug/com/androidview/CommonItemView.kapt_metadata
